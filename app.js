@@ -29,6 +29,7 @@ const customerRoutes = {
     profile: require('./app/api/customer/profile/router'),
     cart: require('./app/api/customer/cart/router'),
     order: require('./app/api/customer/order/router'),
+    book: require('./app/api/customer/book/router'),
 };
 
 const adminRoutes = {
