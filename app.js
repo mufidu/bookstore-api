@@ -19,7 +19,7 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.status(200).json({
         status: 200,
-        msg: 'Welcome to API',
+        msg: 'Welcome to Bookstore API',
         data: {},
     });
 });
