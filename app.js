@@ -24,7 +24,12 @@ const customerRoutes = {
     profile: require('./app/api/customer/profile/router'),
 };
 
+const adminRoutes = {
+    auth: require('./app/api/admin/auth/router'),
+};
+
 Object.values(customerRoutes).forEach(route => app.use('/api', route));
+Object.values(adminRoutes).forEach(route => app.use('/api', route));
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
