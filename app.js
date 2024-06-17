@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 const customerRoutes = {
     auth: require('./app/api/customer/auth/router'),
+    profile: require('./app/api/customer/profile/router'),
 };
 
 Object.values(customerRoutes).forEach(route => app.use('/api', route));
