@@ -1,4 +1,3 @@
-const Book = require('../models').Book;
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app");
@@ -14,8 +13,8 @@ before(async () => {
     try {
         const res = await chai.request(app)
             .post("/api/admin/auth/login")
-            .send({ username: process.env.TEST_USERNAME, password: process.env.TEST_PASSWORD });
-        console.log("Login response", res.body);
+            .send({ username: process.env.TEST_USERNAME_ADMIN, password: process.env.TEST_PASSWORD_ADMIN });
+        console.log("Login response admin", res.body);
         token = res.body.data.token;
     } catch (error) {
         console.error("Login failed", error);
