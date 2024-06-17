@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
 const customerRoutes = {
     auth: require('./app/api/customer/auth/router'),
     profile: require('./app/api/customer/profile/router'),
+    cart: require('./app/api/customer/cart/router'),
 };
 
 const adminRoutes = {
