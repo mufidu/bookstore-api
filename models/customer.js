@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Customer.hasOne(models.Cart);
       Customer.belongsToMany(models.Book, { through: models.CustomerBook });
+      Customer.hasMany(models.Transaction);
     }
   }
   Customer.init({

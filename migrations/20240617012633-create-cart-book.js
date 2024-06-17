@@ -18,6 +18,8 @@ module.exports = {
           model: 'Books',
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       CartId: {
         type: Sequelize.INTEGER,
@@ -25,6 +27,8 @@ module.exports = {
           model: 'Carts',
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,
