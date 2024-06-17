@@ -48,7 +48,7 @@ const checkout = async (req) => {
         CustomerId: id,
         invoiceNumber,
         amount: netAmount,
-        status: 'cart',
+        status: 'pending',
         items: JSON.stringify(cart.books),
     });
 
@@ -94,7 +94,7 @@ const paymentHandler = async (req) => {
 
     const transaction = await Transaction.findOne({
         where: {
-            id: order_id,
+            invoiceNumber: order_id,
         },
     });
 
