@@ -18,28 +18,18 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isIn: {
-          args: [
-            [
-              'settlement',
-              'pending',
-              'expire',
-              'failure',
-              'cancelled',
-              'refunded',
-              'finished',
-              'cart',
-              'unknown',
-            ],
-          ],
-          msg: 'Transaction status is invalid',
-        },
-      },
     },
     amount: DataTypes.INTEGER,
+    items: {
+      type: DataTypes.JSON,
+      allowNull: true,
+    },
     qrisString: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(512),
+      allowNull: true,
+    },
+    qrisURL: {
+      type: DataTypes.STRING(512),
       allowNull: true,
     },
     expiryTime: {

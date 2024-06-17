@@ -28,6 +28,7 @@ const customerRoutes = {
     auth: require('./app/api/customer/auth/router'),
     profile: require('./app/api/customer/profile/router'),
     cart: require('./app/api/customer/cart/router'),
+    order: require('./app/api/customer/order/router'),
 };
 
 const adminRoutes = {
