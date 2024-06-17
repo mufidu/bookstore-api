@@ -17,7 +17,7 @@ const getCustomerProfile = async (req) => {
 
 const updateCustomerProfile = async (req) => {
     const { username } = req.user.customer;
-    const { fullName, email } = req.body;
+    const { fullName, email, newUsername } = req.body;
 
     const customer = await Customer.findOne({ where: { username } });
     if (!customer) {
@@ -35,6 +35,7 @@ const updateCustomerProfile = async (req) => {
             {
                 fullName: fullName,
                 email: email,
+                username: newUsername,
             },
             {
                 where: { username },

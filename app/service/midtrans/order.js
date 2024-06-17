@@ -48,7 +48,7 @@ const checkout = async (req) => {
         CustomerId: id,
         invoiceNumber,
         amount: netAmount,
-        status: 'pending',
+        status: 'Pending',
         items: JSON.stringify(cart.books),
     });
 
@@ -102,7 +102,7 @@ const paymentHandler = async (req) => {
         throw new NotFoundError('Transaction not found');
     }
 
-    if (transaction.status !== 'pending') {
+    if (transaction.status !== 'Pending') {
         throw new BadRequestError('Transaction already paid or expired');
     }
 
