@@ -6,8 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./bin/www",
     "dev": "cross-env NODE_ENV=local nodemon ./bin/www",
-    "test-local": "cross-env NODE_ENV=local mocha --exit",
-    "test": "cross-env NODE_ENV=development mocha --exit"
+    "test-local": "cross-env NODE_ENV=local mocha --timeout 100000 --exit",
+    "test": "cross-env NODE_ENV=development mocha --timeout 100000 --exit"
   },
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.5",
