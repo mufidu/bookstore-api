@@ -26,6 +26,7 @@ const customerRoutes = {
 
 const adminRoutes = {
     auth: require('./app/api/admin/auth/router'),
+    customer: require('./app/api/admin/customer/router'),
 };
 
 Object.values(customerRoutes).forEach(route => app.use('/api', route));
